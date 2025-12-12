@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ShMovie+ — Kurdish Cinema</title>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+  <div class="logo">SH MOVIE</div>
+  <div class="header-icons">
+      <i id="openSearch" class="fa fa-search"></i>
+      <i id="openProfileFromHeader" class="fa fa-user"></i>
+  </div>
+</header>
+
+<section id="heroSection">
+  <div id="heroSlide"></div>
+  <div id="heroOverlay">
+      <h2 id="heroTitle">...</h2>
+      <button id="heroPlayBtn"><i class="fa fa-play"></i> بەلاڤکرن</button>
+  </div>
+</section>
+
+<!-- HOME PAGE -->
+<section id="pageHome" class="page active">
+
+  
+  <h3 class="section-title">🎭 ژانرەکان</h3>
+  <div id="homeCategories" class="home-categories"></div>
+
+  <h3 class="section-title">🔥 ئەوێن گەرم</h3>
+  <div class="movie-row" id="rowHot"></div>
+
+  <h3 class="section-title">⭐ ناڤدارەکان</h3>
+  <div class="movie-row" id="rowPopular"></div>
+
+  <h3 class="section-title">🎬 نویترین</h3>
+  <div class="movie-row" id="rowNewest"></div>
+  <h3 class="section-title">⏳ بەردەوام بین</h3>
+  <div class="movie-row" id="rowContinue"></div>
+
+</section>
+
+<!-- CATEGORIES -->
+<section id="pageCategories" class="page">
+  <h3 class="section-title">ژانرێن 🎭</h3>
+  <div id="categoryList"></div>
+  <h3 class="section-title">فیلمێن ژانرێ</h3>
+  <div class="movie-row" id="rowCategoryMovies"></div>
+</section>
+
+<!-- FAVORITES -->
+<section id="pageFavorites" class="page">
+  <h3 class="section-title">❤️ دڵخوازان</h3>
+  <div class="movie-row" id="rowFavorites"></div>
+</section>
+
+<!-- PROFILE -->
+<section id="pageProfile" class="page">
+  <div class="profile-card">
+      <img id="profileImage" class="profile-img"
+       src="https://i.ibb.co/ZJ7t9yQ/profile.jpg" />
+      <h2 id="profileName">شڤان جمال</h2>
+      <button id="editProfileBtn" class="profile-btn">دەستکارییا پرۆفایلی بکە</button>
+  </div>
+</section>
+
+<!-- EDIT PROFILE -->
+<section id="pageEditProfile" class="page">
+  <h3 class="section-title">دەستکاریا پرۆفایلی بکە</h3>
+  <div class="edit-form">
+      <input id="editName" placeholder="ناڤێ نوی..." />
+      <input id="editImage" placeholder="لینکێ وێنەی..." />
+      <button id="saveProfileBtn" class="save-btn">پاشکەفتکرن</button>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<section id="pageSearch" class="page">
+  <h3 class="section-title">لئگەڕیان 🔍</h3>
+  <input id="searchBox" class="search-box" placeholder="ناڤێ فلمی..." />
+  <div class="movie-row" id="rowSearchResults"></div>
+</section>
+
+<!-- VIDEO MODAL WITH PART 1 / PART 2 -->
+<div id="videoModal">
+  <div id="videoContainer"></div>
+
+  <div id="videoParts">
+      <button class="part-btn" id="btnPart1">1️⃣ بەشێ ئێکێ</button>
+      <button class="part-btn" id="btnPart2">2️⃣ بەشێ دووئ</button>
+      <button class="part-btn" id="btnPart3">3️⃣ بەشێ سێیێ</button>
+  </div>
+
+  <i id="closeVideoModal" class="fa fa-times close-video"></i>
+</div>
+
+<nav id="bottomNav">
+  <button data-page="pageHome" class="active"><i class="fa fa-home"></i>سەرەکی</button>
+  <button data-page="pageProfile"><i class="fa fa-user"></i>پڕۆفایل</button>
+</nav>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
